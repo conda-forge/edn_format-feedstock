@@ -1,5 +1,5 @@
 {% set name = "edn_format" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5c748c57034acbaecbb08e7f5d955fbcdcb0454c2c3b6cdd247cc5afeca1f6b
+  sha256: 259c92a97ce4c842eddfd00953cf34cccbd0232263f98b66931cf1e6818f0140
 
 build:
   noarch: python
