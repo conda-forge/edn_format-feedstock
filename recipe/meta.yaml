@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python
+    - pip
     - ply >=3.10
     - pyrfc3339 >=0.2
     - pytz >=2016.10
@@ -27,6 +28,8 @@ requirements:
 test:
   imports:
     - edn_format
+  commands:
+    - pip check
 
 about:
   home: https://swaroopch.com/2012/12/24/edn-format-python/
