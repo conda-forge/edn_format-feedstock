@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python
+    - pip
     - ply >=3.10
     - pyrfc3339 >=0.2
     - pytz >=2016.10
