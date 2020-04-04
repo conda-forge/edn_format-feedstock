@@ -1,5 +1,5 @@
 {% set name = "edn_format" %}
-{% set version = "0.6.5" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 259c92a97ce4c842eddfd00953cf34cccbd0232263f98b66931cf1e6818f0140
+  sha256: f5cf7e857b5f901a1ef9d05327608d79d4021a9fc2dfe2c6c1e90b9fee9a84fb
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'EDN reader and writer implementation in Python, using PLY (lex, yacc)'
+  summary: EDN reader and writer implementation in Python, using PLY (lex, yacc)
 
   description: |
     Implements the EDN format in Python. All features of EDN are 
