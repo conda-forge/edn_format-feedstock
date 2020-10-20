@@ -5,9 +5,13 @@ Home: https://swaroopch.com/2012/12/24/edn-format-python/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/edn_format-feedstock/blob/master/LICENSE.txt)
 
 Summary: EDN reader and writer implementation in Python, using PLY (lex, yacc)
+
+Development: https://github.com/swaroopch/edn_format
+
+Documentation: https://github.com/swaroopch/edn_format
 
 Implements the EDN format in Python. All features of EDN are
 implemented, including custom tagged elements.
