@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: edn_format
+  version: "0.8.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: a0febbe33b44f18f8c1d8e767eda282c4c30344ce1975fda7f2362412893b192
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - pip
+    - ply >=3.10
+    - pyrfc3339 >=0.2
+    - pytz >=2016.10
+
+tests:
+  - python:
+      imports:
+        - edn_format
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: EDN reader and writer implementation in Python, using PLY (lex, yacc)
+  description: |
+    Implements the EDN format in Python. All features of EDN are
+    implemented, including custom tagged elements.
+  homepage: https://swaroopch.com/2012/12/24/edn-format-python/
+  repository: https://github.com/swaroopch/edn_format
+  documentation: https://github.com/swaroopch/edn_format
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
