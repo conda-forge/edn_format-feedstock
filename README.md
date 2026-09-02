@@ -16,7 +16,6 @@ Documentation: https://github.com/swaroopch/edn_format
 Implements the EDN format in Python. All features of EDN are
 implemented, including custom tagged elements.
 
-
 Current build status
 ====================
 
@@ -48,31 +47,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `edn_format` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install edn_format
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install edn_format
 ```
 
-It is possible to list all of the versions of `edn_format` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add edn_format
+# for installing globally
+pixi global install edn_format
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `edn_format` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search edn_format --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search edn_format --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search edn_format --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -84,6 +125,8 @@ mamba repoquery whoneeds edn_format --channel conda-forge
 # List dependencies of `edn_format`:
 mamba repoquery depends edn_format --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -153,7 +196,4 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
-
-
-<!-- dummy commit to enable rerendering -->
 
